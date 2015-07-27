@@ -1,20 +1,25 @@
 # ObsFart
 
-ObsFart is an estoric functional programming system.
+ObsFart is an estoric functional programming library.
 
 1. It's called ObsFart because its probably as code smelly as one of your worst farts. I'm not a mathematician, I shouldn't be writing something like this.
 2. This is a spec that should be implementable in any functional programming language.
+3. I wrote it because I could. As for should... See 1.
 
 ## Rules:
 
 * All functions are strictly typed. If it expects an int, and you give a string, it'll simply raise an obtuse exception.
-* The only exception produced by any of these functions should be an equivalent of *NotYetImplemented*
+* The only exception produced by any of these functions should be an equivalent of *NotYetImplemented*.
+
+### Functions Available:
+
 * a() (Operates as a + operator, and can take an unlimited number of inputs, in the form of a list.)
 * b() (Operates as a - operator, and can take an unlimited number of inputs, in the form of a list.)
 * c() (Operates as a * operator, and can take an unlimited number of inputs, in the form of a list.)
 * d() (Operates as a / operator, and can take an unlimited number of inputs, in the form of a list.)
 * e() (Takes a string value of more than two characters, or multiple strings (in the form of a list), and swaps every third character with the next.)
-* f() (Expects a,b,c,d or e, and can take an unlimited number of inputs, in the form of a list. Converts a() into b(), and c() into d(). Reverses the output of e().)
+* f() (Expects a,b,c,d,e,g or h, and can take an unlimited number of inputs, in the form of a list. Converts a() into b(), and c() into d(). Reverses the output 
+of e(). Swaps h() and g().)
 * g() (Prints to stdout, in reverse order. Can take one input of int, string or list. In the case of a list input, each item is reversed, and the whole list is printed in reverse.)
 * h() (Prints to file, in reverse order. Can take two values (input, output) or a list, where the middle value, or in the case of an even list the first middle value represents the output file.)
 * i() (Reads in a data stream, either StreamIO or file object. Data stream is stored for evaluation - safety of which is left to the user. Takes one input, string or list of strings.)
@@ -28,7 +33,7 @@ The Python Implementation, ```obsfart.py```, if a work-in-progress to try and ma
 
 ## Simple ObsFart Program
 
-```obsfart
+```python
 g(k("Herlo","Wolld"))
 ```
 
