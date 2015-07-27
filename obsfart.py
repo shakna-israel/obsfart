@@ -27,3 +27,13 @@ def c(x,y=None):
         for item in x:
             result = result.__mul__(item)
         return result
+
+def d(x,y=None):
+    """Takes two ints, or a list of ints"""
+    if y:
+        return x.__floordiv__(y)
+    else:
+        result = 1
+        for item in x:
+            result = result.__floordiv__(item)
+        return result
