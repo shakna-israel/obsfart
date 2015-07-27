@@ -7,7 +7,8 @@ ObsFart is an estoric functional programming system.
 
 ## Rules:
 
-* All functions are strictly typed. If it expects an int, and you give a string, it'll simply raise an exception.
+* All functions are strictly typed. If it expects an int, and you give a string, it'll simply raise an obtuse exception.
+* The only exception produced by any of these functions should be an equivalent of *NotYetImplemented*
 * a() (Operates as a + operator, and can take an unlimited number of inputs, in the form of a list.)
 * b() (Operates as a - operator, and can take an unlimited number of inputs, in the form of a list.)
 * c() (Operates as a * operator, and can take an unlimited number of inputs, in the form of a list.)
