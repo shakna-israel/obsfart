@@ -17,3 +17,13 @@ def b(x,y=None):
         for item in x:
             result = result.__sub__(item)
         return result
+
+def c(x,y=None):
+    """Takes two ints, or a list of ints"""
+    if y:
+        return x.__mul__(y)
+    else:
+        result = 1
+        for item in x:
+            result = result.__mul__(item)
+        return result
