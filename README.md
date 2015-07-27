@@ -42,3 +42,9 @@ g(k("Herlo","Wolld"))
 ```
 
 *Note:* Obviously, ObsFart is far more about computation than string manipulation.
+
+## License
+
+Both the spec and the Python Implementation are in the Public Domain, and can be used for any purpose without restriction.
+
+See [LICENSE](LICENSE)
