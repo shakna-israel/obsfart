@@ -1,7 +1,20 @@
 from __future__ import division
+import sys
+
+def exceptionHandler(exception_type, exception, traceback):
+    debug = False
+    if not debug:
+        print("\n\nObsfart Error: NotYetImplemented")
+        sys.exit(0)
+    else:
+        raise
+
+sys.excepthook = exceptionHandler
 
 def a(x,y=None):
     """Takes two ints, or a list of ints"""
+    x = int(x)
+    y = int(y)
     if y:
         return x.__add__(y)
     else:
@@ -78,4 +91,6 @@ def e(x, y=None):
     else:
         raise NotImplementedError
 
-print(e("Herlo","Wolld"))
+print(e(e("Something","Cool")[0],e("Something","Cool")[1]))
+
+a("string",1)
