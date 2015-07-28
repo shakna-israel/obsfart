@@ -7,7 +7,7 @@ class Obsfart(object):
         sys.excepthook = self.exceptionHandler
 
     def exceptionHandler(self, exception_type, exception, traceback):
-        debug = False
+        debug = True
         if not debug:
             print("\n\nError: NotYetImplemented")
             sys.exit(0)
@@ -16,8 +16,11 @@ class Obsfart(object):
 
     def a(self, x,y=None):
         """Takes two ints, or a list of ints"""
-        x = int(x)
-        y = int(y)
+        if y:
+            x = int(x)
+            y = int(y)
+        else:
+            x = list(x)
         if y:
             return x.__add__(y)
         else:
@@ -114,9 +117,3 @@ class Obsfart(object):
 
     def m():
         sys.excepthook = sys.__excepthook__
-
-fart = Obsfart()
-
-print(fart.e(fart.e("Something","Cool")[0],fart.e("Something","Cool")[1]))
-
-print(fart.a(1,1))
