@@ -33,7 +33,7 @@ def c(x,y=None):
 def d(x,y=None):
     """Takes two ints, or a list of ints"""
     if y:
-        return x.__floordiv__(y)
+        return x.__truediv__(y)
     else:
         result = 1
         for item in x:
