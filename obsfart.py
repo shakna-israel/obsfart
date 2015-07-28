@@ -3,8 +3,11 @@ import sys
 
 class Obsfart(object):
 
+    def __init__(self):
+        sys.excpthook = self.exceptionHandler
+
     def exceptionHandler(self, exception_type, exception, traceback):
-        debug = True
+        debug = False
         if not debug:
             print("\n\nError: NotYetImplemented")
             sys.exit(0)
