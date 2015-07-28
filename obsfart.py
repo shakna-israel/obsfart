@@ -39,3 +39,9 @@ def d(x,y=None):
         for item in x:
             result = result.__truediv__(item)
         return result
+
+def e(x, y=None):
+    if y:
+        for i in x:
+            for u in y:
+                raise NotYetImplemented
