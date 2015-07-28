@@ -58,9 +58,6 @@ class Obsfart(object):
 
     def e(self, x, y=None):
         if y:
-            # Use a for loop to get the index of each character in both strings.
-            # If the index number is a mod (%) of 3, then add it to a list. (One list for x, one for y.)
-            # Rebuild strings from lists, and return both strings.
             x = list(x)
             x2 = list(x)
             y = list(y)
@@ -94,13 +91,32 @@ class Obsfart(object):
         else:
             raise NotImplementedError
 
+    def f():
+        raise NotImplementedError
+
+    def g():
+        raise NotImplementedError
+
+    def h():
+        raise NotImplementedError
+
+    def i():
+        raise NotImplementedError
+
+    def j():
+        raise NotImplementedError
+
+    def k():
+        raise NotImplementedError
+
+    def l():
+        raise NotImplementedError
+
+    def m():
+        sys.excepthook = sys.__excepthook__
+
 fart = Obsfart()
 
 print(fart.e(fart.e("Something","Cool")[0],fart.e("Something","Cool")[1]))
 
 print(fart.a(1,1))
-
-del fart
-sys.excepthook = sys.__excepthook__
-
-raise IOError

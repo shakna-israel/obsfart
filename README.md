@@ -26,6 +26,7 @@ of e(). Swaps h() and g().)
 * j() (Evaluates a stored data stream, by splitting it into a,b,c,d,e,f,g,h,i,j and evaluating in order. Normal Python functions should be ignored, but j() isn't secure, and doesn't pretend to be.)
 * k() (Adds two or more strings together, after running them through e(). Takes two inputs, or a list.)
 * l() (Takes two strings or a list of strings. If given two strings, takes the first from the first. (e.g. string.replace("secondstring")). If given a list of strings, the middle value, or in the case of an even list, the first middle value is the substring to replace with.)
+* m() (Resets any namespace modifications that the Obsfart module may have modified. (Such as to override exceptions).)
 
 ## Python Implementation
 
