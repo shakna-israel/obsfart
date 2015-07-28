@@ -4,7 +4,7 @@ import sys
 class Obsfart(object):
 
     def __init__(self):
-        sys.excpthook = self.exceptionHandler
+        sys.excepthook = self.exceptionHandler
 
     def exceptionHandler(self, exception_type, exception, traceback):
         debug = False
@@ -99,3 +99,8 @@ fart = Obsfart()
 print(fart.e(fart.e("Something","Cool")[0],fart.e("Something","Cool")[1]))
 
 print(fart.a(1,1))
+
+del fart
+sys.excepthook = sys.__excepthook__
+
+raise IOError
