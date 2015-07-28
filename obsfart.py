@@ -3,12 +3,20 @@ import sys
 
 class Obsfart(object):
 
+    def __init__(self):
+        """Hide Obsfart Tracebacks"""
+        sys.excepthook = self.exceptionHandler
+
     def __enter__(self):
         """Hide Obsfart Tracebacks"""
         sys.excepthook = self.exceptionHandler
 
-    def __exit__(self, *err):
-        """When deleting the object, restore the Exception Handler"""
+    def __exit__(self):
+        """Cleanup"""
+        sys.excepthook = sys.__excepthook__
+
+    def __del__(self):
+        """Cleanup"""
         sys.excepthook = sys.__excepthook__
 
     def exceptionHandler(self, exception_type, exception, traceback):
@@ -104,5 +112,7 @@ with Obsfart() as fart:
     print(fart.e(fart.e("Something","Cool")[0],fart.e("Something","Cool")[1]))
 
     fart.a("string",1)
+
+del Fart
 
 raise IOError
