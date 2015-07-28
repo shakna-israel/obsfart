@@ -3,26 +3,10 @@ import sys
 
 class Obsfart(object):
 
-    def __init__(self):
-        """Hide Obsfart Tracebacks"""
-        sys.excepthook = self.exceptionHandler
-
-    def __enter__(self):
-        """Hide Obsfart Tracebacks"""
-        sys.excepthook = self.exceptionHandler
-
-    def __exit__(self):
-        """Cleanup"""
-        sys.excepthook = sys.__excepthook__
-
-    def __del__(self):
-        """Cleanup"""
-        sys.excepthook = sys.__excepthook__
-
     def exceptionHandler(self, exception_type, exception, traceback):
-        debug = False
+        debug = True
         if not debug:
-            print("\n\nObsfart Error: NotYetImplemented")
+            print("\n\nError: NotYetImplemented")
             sys.exit(0)
         else:
             raise
@@ -107,12 +91,8 @@ class Obsfart(object):
         else:
             raise NotImplementedError
 
-with Obsfart() as fart:
+fart = Obsfart()
 
-    print(fart.e(fart.e("Something","Cool")[0],fart.e("Something","Cool")[1]))
+print(fart.e(fart.e("Something","Cool")[0],fart.e("Something","Cool")[1]))
 
-    fart.a("string",1)
-
-del Fart
-
-raise IOError
+print(fart.a(1,1))
