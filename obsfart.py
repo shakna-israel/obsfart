@@ -3,7 +3,7 @@ import sys
 
 class Obsfart(object):
 
-    def __init__(self):
+    def __enter__(self):
         """Hide Obsfart Tracebacks"""
         sys.excepthook = self.exceptionHandler
 
