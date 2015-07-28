@@ -1,3 +1,5 @@
+from __future__ import division
+
 def a(x,y=None):
     """Takes two ints, or a list of ints"""
     if y:
@@ -35,5 +37,5 @@ def d(x,y=None):
     else:
         result = 1
         for item in x:
-            result = result.__floordiv__(item)
+            result = result.__truediv__(item)
         return result
