@@ -75,6 +75,7 @@ e.g.
    gnirtS
 >> g([1024,"String"])
    ["gnirtS",4201]
+```
 
 * h() (Prints to file, in reverse order. Can take two values (input, output) or a list, where the middle value, or in the case of an even list the first middle value represents the output file.)
 
