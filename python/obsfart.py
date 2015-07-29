@@ -60,6 +60,7 @@ class Obsfart(object):
             return result
 
     def e(self, x, y=None):
+        """Takes two strings, or a list of strings"""
         if y:
             x = list(x)
             x2 = list(x)
@@ -92,7 +93,28 @@ class Obsfart(object):
             y = "".join(y)
             return (x, y)
         else:
-            raise NotImplementedError
+            for item in x:
+                orig = list(item)
+                copy = list(item)
+                index = []
+                iter = 0
+                return_list = []
+                for i in orig:
+                    iter = iter + 1
+                    index.append(iter)
+                for item in index:
+                    if not item % 3:
+                        try:
+                            to_replace
+                        except UnboundLocalError:
+                            to_replace = None
+                        if to_replace:
+                            copy[item -1] = to_replace
+                            to_replace = False
+                        else:
+                            to_replace = orig[item -1]
+                return_list.append("".join(copy))
+            return return_list
 
     def f():
         raise NotImplementedError
