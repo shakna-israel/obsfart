@@ -114,6 +114,3 @@ class Obsfart(object):
 
     def l():
         raise NotImplementedError
-
-    def m():
-        sys.excepthook = sys.__excepthook__
